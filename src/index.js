@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Reciever from './Reciever';
-import * as serviceWorker from './serviceWorker';
 
 const client = new window.Paho.MQTT.Client("192.168.1.249", 9001, "react-client");
 client.connect({
@@ -45,8 +43,3 @@ function onMessageArrived(message) {
 //     </React.StrictMode>,
 //       document.getElementById('root')
 // );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
